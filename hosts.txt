@@ -1,0 +1,20 @@
+#[staging_DB]
+#X.X.X.X
+#
+#[staging_WEB]
+#X.X.X.X
+#
+#[staging_APP]
+#X.X.X.X
+#
+#[staging_ALL:children]
+#staging_DB
+#staging_WEB
+#staging_APP
+
+[staging_servers]
+asterisk ansible_host=10.232.126.39   owner=You
+
+#[staging_servers:vars]
+#ansible_user=root
+#asnible_ssh_private_key=/root/.ssh/id_rsa

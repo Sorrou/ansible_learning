@@ -1,0 +1,12 @@
+---
+- name: Install Stress
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Install Stress
+    yum: name=stress state=removed
+
+  - name: Start Stress on boot
+    service: name=stress state=started enabled=yes
+
